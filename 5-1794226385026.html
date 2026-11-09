@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me | Shahrier Noor Pritom</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #334155;
+      --primary: #1e3a8a;
+      --primary-hover: #172554;
+      --border: #cbd5e1;
+      --focus-ring: #ea580c;
+      --error: #b91c1c;
+      --success-bg: #dcfce7;
+      --success-text: #15803d;
+      --success-border: #86efac;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); }
+    .skip-link { position: absolute; top: -50px; left: 1rem; background: var(--focus-ring); color: #fff; padding: 0.75rem 1.25rem; font-weight: 700; text-decoration: none; z-index: 1000; border-radius: 4px; }
+    .skip-link:focus { top: 1rem; }
+    :focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
+    header { background: #fff; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; }
+    .nav-brand { font-size: 1.25rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    nav ul { display: flex; list-style: none; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: var(--text); text-decoration: none; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 4px; }
+    nav a:hover, nav a:focus { background: #e2e8f0; color: var(--primary); }
+    nav a[aria-current="page"] { background: var(--primary); color: #fff; }
+    main { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+    section { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; margin-bottom: 2rem; }
+    h1 { font-size: 2.25rem; color: var(--primary); margin-bottom: 1rem; }
+    p { margin-bottom: 1.5rem; color: var(--text-muted); }
+    .form-group { margin-bottom: 1.5rem; }
+    label { display: block; margin-bottom: 0.5rem; font-weight: 700; }
+    input, textarea { width: 100%; padding: 0.75rem; border: 2px solid var(--border); border-radius: 6px; font-size: 1rem; font-family: inherit; }
+    .error-msg { color: var(--error); font-size: 0.875rem; font-weight: 600; margin-top: 0.35rem; display: none; }
+    .status-alert { padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem; display: none; }
+    .status-alert.active { display: block; background: var(--success-bg); color: var(--success-text); border: 1px solid var(--success-border); }
+    .btn { display: inline-block; background: var(--primary); color: #fff; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 700; border-radius: 6px; border: none; cursor: pointer; }
+    .btn:hover, .btn:focus { background: var(--primary-hover); }
+    footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--border); background: #fff; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Shahrier Noor Pritom</a>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="project-details.html">Project Details</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Contact Me</h1>
+      <p>Have questions regarding placement roles or project work? Leave your details below (client-side only submission).</p>
+
+      <div id="form-feedback" class="status-alert" role="alert" aria-live="polite"></div>
+
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name (Required)</label>
+          <input type="text" id="name" name="name" required aria-describedby="name-err" autocomplete="name">
+          <span id="name-err" class="error-msg">Please enter your name.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address (Required)</label>
+          <input type="email" id="email" name="email" required aria-describedby="email-err" autocomplete="email">
+          <span id="email-err" class="error-msg">Please enter a valid email address (e.g. name@example.com).</span>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject (Required)</label>
+          <input type="text" id="subject" name="subject" required aria-describedby="subject-err">
+          <span id="subject-err" class="error-msg">Please enter a subject.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Comments or Questions (Required)</label>
+          <textarea id="message" name="message" rows="5" required aria-describedby="message-err"></textarea>
+          <span id="message-err" class="error-msg">Please enter your message or question.</span>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shahrier Noor Pritom. Developed with vanilla HTML, CSS, and JavaScript.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const alertBox = document.getElementById('form-feedback');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+
+      const name = document.getElementById('name');
+      const nameErr = document.getElementById('name-err');
+      if (name.value.trim() === '') {
+        nameErr.style.display = 'block';
+        valid = false;
+      } else {
+        nameErr.style.display = 'none';
+      }
+
+      const email = document.getElementById('email');
+      const emailErr = document.getElementById('email-err');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email.value.trim())) {
+        emailErr.style.display = 'block';
+        valid = false;
+      } else {
+        emailErr.style.display = 'none';
+      }
+
+      const subject = document.getElementById('subject');
+      const subjectErr = document.getElementById('subject-err');
+      if (subject.value.trim() === '') {
+        subjectErr.style.display = 'block';
+        valid = false;
+      } else {
+        subjectErr.style.display = 'none';
+      }
+
+      const message = document.getElementById('message');
+      const messageErr = document.getElementById('message-err');
+      if (message.value.trim() === '') {
+        messageErr.style.display = 'block';
+        valid = false;
+      } else {
+        messageErr.style.display = 'none';
+      }
+
+      if (valid) {
+        alertBox.textContent = 'Thank you! Your message has been sent successfully.';
+        alertBox.classList.add('active');
+        form.reset();
+        alertBox.focus();
+      }
+    });
+  </script>
+</body>
+</html>
