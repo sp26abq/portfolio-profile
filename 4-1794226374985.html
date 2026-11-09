@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details | Shahrier Noor Pritom</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #334155;
+      --primary: #1e3a8a;
+      --primary-hover: #172554;
+      --border: #cbd5e1;
+      --focus-ring: #ea580c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); }
+    .skip-link { position: absolute; top: -50px; left: 1rem; background: var(--focus-ring); color: #fff; padding: 0.75rem 1.25rem; font-weight: 700; text-decoration: none; z-index: 1000; border-radius: 4px; }
+    .skip-link:focus { top: 1rem; }
+    :focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
+    header { background: #fff; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; }
+    .nav-brand { font-size: 1.25rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    nav ul { display: flex; list-style: none; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: var(--text); text-decoration: none; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 4px; }
+    nav a:hover, nav a:focus { background: #e2e8f0; color: var(--primary); }
+    nav a[aria-current="page"] { background: var(--primary); color: #fff; }
+    main { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+    section { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; margin-bottom: 2rem; }
+    h1 { font-size: 2.25rem; color: var(--primary); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; color: var(--primary); margin-top: 1.75rem; margin-bottom: 0.75rem; }
+    p { margin-bottom: 1rem; color: var(--text-muted); }
+    .holding-tag { display: inline-block; background: #fef3c7; color: #92400e; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 4px; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--primary); color: #fff; padding: 0.65rem 1.2rem; font-size: 0.95rem; font-weight: 700; border-radius: 6px; border: none; text-decoration: none; margin-top: 1.5rem; }
+    .btn:hover, .btn:focus { background: var(--primary-hover); }
+    footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--border); background: #fff; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Shahrier Noor Pritom</a>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="project-details.html" aria-current="page">Project Details</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="details-heading">
+      <h1 id="details-heading">Project Details: Campus Activity Web Hub</h1>
+      <span class="holding-tag">Holding Page Artifact</span>
+
+      <h2>1. Problem Definition & Goals</h2>
+      <p>University students often find sports schedules, club timings, and facility availability fragmented across disparate portals. The goal of this web application was to consolidate activity scheduling into an accessible, responsive single-point interface.</p>
+
+      <h2>2. Architecture & Design Choices</h2>
+      <p>The application was constructed using custom vanilla HTML, CSS, and modern JavaScript without framework overhead. This architectural decision ensured full control over document semantics, avoided bloated client-side bundles, and guaranteed strict conformance with WCAG 2.1 AA benchmarks.</p>
+
+      <h2>3. Accessibility & Usability Highlights</h2>
+      <p>The interface guarantees complete keyboard navigability via clear focus rings, passes all contrast thresholds (exceeding 7.5:1), and includes live ARIA regions to inform screen readers of dynamic content updates.</p>
+
+      <a href="portfolio.html" class="btn">&larr; Return to Portfolio</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shahrier Noor Pritom. Developed with vanilla HTML, CSS, and JavaScript.</p>
+  </footer>
+</body>
+</html>
