@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Shahrier Noor Pritom</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #334155;
+      --primary: #1e3a8a;
+      --primary-hover: #172554;
+      --border: #cbd5e1;
+      --focus-ring: #ea580c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); }
+    .skip-link { position: absolute; top: -50px; left: 1rem; background: var(--focus-ring); color: #fff; padding: 0.75rem 1.25rem; font-weight: 700; text-decoration: none; z-index: 1000; border-radius: 4px; }
+    .skip-link:focus { top: 1rem; }
+    :focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
+    header { background: #fff; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; }
+    .nav-brand { font-size: 1.25rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    nav ul { display: flex; list-style: none; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: var(--text); text-decoration: none; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 4px; }
+    nav a:hover, nav a:focus { background: #e2e8f0; color: var(--primary); }
+    nav a[aria-current="page"] { background: var(--primary); color: #fff; }
+    main { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+    section { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; margin-bottom: 2rem; }
+    h1 { font-size: 2.25rem; color: var(--primary); margin-bottom: 1.5rem; }
+    h2 { font-size: 1.5rem; color: var(--primary); margin-bottom: 0.75rem; }
+    p { margin-bottom: 1rem; color: var(--text-muted); }
+    .profile-grid { display: grid; grid-template-columns: 200px 1fr; gap: 2rem; align-items: start; }
+    .profile-img-container { width: 100%; aspect-ratio: 1/1; border-radius: 8px; overflow: hidden; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; background: #e2e8f0; }
+    .profile-img-container img { width: 100%; height: 100%; object-fit: cover; }
+    .badge-list { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin-top: 1rem; }
+    .badge { background: #e0e7ff; color: #3730a3; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 700; }
+    footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--border); background: #fff; color: var(--text-muted); }
+    @media (max-width: 768px) { .profile-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Shahrier Noor Pritom</a>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">About</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="project-details.html">Project Details</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="about-heading">
+      <h1 id="about-heading">About Me</h1>
+      <div class="profile-grid">
+        <div class="profile-img-container">
+          <!-- Fallback vector if profile.jpg is missing -->
+          <img src="profile.jpg" alt="Portrait photo of Shahrier Noor Pritom" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23475569\'><path d=\'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z\'/></svg>'">
+        </div>
+        <div>
+          <h2>Shahrier Noor Pritom</h2>
+          <p><strong>Year of Study:</strong> Year 2 Undergraduate</p>
+          <p><strong>Award Target:</strong> BSc (Hons) Computer Science</p>
+          <p>I am an undergraduate student seeking an industrial placement opportunity. My academic coursework spans web development, database systems, usability engineering, and universal accessibility. I build structured, user-friendly digital platforms that conform strictly to web standards.</p>
+          <ul class="badge-list" aria-label="Key Skills">
+            <li class="badge">Semantic HTML5</li>
+            <li class="badge">Vanilla CSS</li>
+            <li class="badge">JavaScript (ES6+)</li>
+            <li class="badge">WCAG 2.1 AA Compliance</li>
+            <li class="badge">Relational Databases</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shahrier Noor Pritom. Developed with vanilla HTML, CSS, and JavaScript.</p>
+  </footer>
+</body>
+</html>
