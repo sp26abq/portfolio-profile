@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Interests | Shahrier Noor Pritom</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #334155;
+      --primary: #1e3a8a;
+      --border: #cbd5e1;
+      --focus-ring: #ea580c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); }
+    .skip-link { position: absolute; top: -50px; left: 1rem; background: var(--focus-ring); color: #fff; padding: 0.75rem 1.25rem; font-weight: 700; text-decoration: none; z-index: 1000; border-radius: 4px; }
+    .skip-link:focus { top: 1rem; }
+    :focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
+    header { background: #fff; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; }
+    .nav-brand { font-size: 1.25rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    nav ul { display: flex; list-style: none; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: var(--text); text-decoration: none; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 4px; }
+    nav a:hover, nav a:focus { background: #e2e8f0; color: var(--primary); }
+    nav a[aria-current="page"] { background: var(--primary); color: #fff; }
+    main { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+    section { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; margin-bottom: 2rem; }
+    h1 { font-size: 2.25rem; color: var(--primary); margin-bottom: 1.5rem; }
+    h2 { font-size: 1.35rem; color: var(--primary); margin-bottom: 0.75rem; }
+    p { margin-bottom: 1rem; color: var(--text-muted); }
+    .interest-article { display: grid; grid-template-columns: 140px 1fr; gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--border); }
+    .interest-article:first-of-type { border-top: none; padding-top: 0; }
+    .interest-img-box { width: 100%; height: 110px; background: #f1f5f9; border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--border); background: #fff; color: var(--text-muted); }
+    @media (max-width: 768px) { .interest-article { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Shahrier Noor Pritom</a>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="interests.html" aria-current="page">Interests</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="project-details.html">Project Details</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="interests-heading">
+      <h1 id="interests-heading">Technical Interests</h1>
+
+      <article class="interest-article">
+        <div class="interest-img-box">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="#1e3a8a" aria-hidden="true" focusable="false">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 2h7v3h-7V6zm-7 0h5v3H5V6zm0 5h5v3H5v-3zm7 0h7v3h-7v-3zm-7 5h5v2H5v-2zm7 2v-2h7v2h-7z"/>
+          </svg>
+        </div>
+        <div>
+          <h2>Universal Accessibility & Standards-Driven Frontend</h2>
+          <p>My interest centers on creating digital software that delivers parity of experience to users relying on assistive technology, screen readers, and adaptive input controls. I specialize in semantic HTML structures, standard WAI-ARIA states, and high-contrast color systems.</p>
+          <p>I aim to apply accessibility directly into continuous integration workflows, ensuring user interfaces meet WCAG 2.1 AA specifications from day one of development.</p>
+        </div>
+      </article>
+
+      <article class="interest-article">
+        <div class="interest-img-box">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="#1e3a8a" aria-hidden="true" focusable="false">
+            <path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1zm0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1zM6 4h2V3H6v1zm0 8h2v-1H6v1zm0 8h2v-1H6v1z"/>
+          </svg>
+        </div>
+        <div>
+          <h2>Relational Database Design & Scalable Web Architectures</h2>
+          <p>I am keenly interested in transactional persistence and back-end service communication. Designing normalized database schemas, building transactional safety, and crafting performant SQL queries form a key foundation of my coursework.</p>
+          <p>During my placement, I intend to deepen my knowledge of scalable REST service patterns, database indexing optimization, and secure API data validation pipelines.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shahrier Noor Pritom. Developed with vanilla HTML, CSS, and JavaScript.</p>
+  </footer>
+</body>
+</html>
