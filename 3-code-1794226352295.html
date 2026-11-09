@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Shahrier Noor Pritom</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #334155;
+      --primary: #1e3a8a;
+      --primary-hover: #172554;
+      --border: #cbd5e1;
+      --focus-ring: #ea580c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); }
+    .skip-link { position: absolute; top: -50px; left: 1rem; background: var(--focus-ring); color: #fff; padding: 0.75rem 1.25rem; font-weight: 700; text-decoration: none; z-index: 1000; border-radius: 4px; }
+    .skip-link:focus { top: 1rem; }
+    :focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
+    header { background: #fff; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; }
+    .nav-brand { font-size: 1.25rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    nav ul { display: flex; list-style: none; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: var(--text); text-decoration: none; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 4px; }
+    nav a:hover, nav a:focus { background: #e2e8f0; color: var(--primary); }
+    nav a[aria-current="page"] { background: var(--primary); color: #fff; }
+    main { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+    section { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; margin-bottom: 2rem; }
+    h1 { font-size: 2.25rem; color: var(--primary); margin-bottom: 1rem; }
+    h2 { font-size: 1.35rem; color: var(--primary); margin-bottom: 0.5rem; }
+    p { margin-bottom: 1rem; color: var(--text-muted); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+    .card { border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; background: #fff; display: flex; flex-direction: column; justify-content: space-between; }
+    .card-actions { display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap; }
+    .btn { display: inline-block; background: var(--primary); color: #fff; padding: 0.65rem 1.2rem; font-size: 0.95rem; font-weight: 700; border-radius: 6px; border: none; cursor: pointer; text-decoration: none; text-align: center; }
+    .btn:hover, .btn:focus { background: var(--primary-hover); }
+    .btn-secondary { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+    .btn-secondary:hover, .btn-secondary:focus { background: #e0e7ff; }
+    /* Modal dialog */
+    .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.75); display: none; justify-content: center; align-items: center; z-index: 200; padding: 1rem; }
+    .modal-overlay.active { display: flex; }
+    .modal-box { background: #fff; border-radius: 8px; max-width: 550px; width: 100%; padding: 2rem; border: 1px solid var(--border); }
+    footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--border); background: #fff; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Shahrier Noor Pritom</a>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="project-details.html">Project Details</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="portfolio-heading">
+      <h1 id="portfolio-heading">Portfolio of Work</h1>
+      <p>Select <strong>"Quick Info"</strong> to open an accessible pop-up window, or choose <strong>"Full Project Details"</strong> to open the full holding page.</p>
+
+      <div class="grid">
+        <div class="card">
+          <div>
+            <h2>Campus Activity Web Hub</h2>
+            <p>An accessible portal designed to centralize student athletic engagement, campus events, and facility booking schedules.</p>
+          </div>
+          <div class="card-actions">
+            <button type="button" class="btn btn-secondary" onclick="openModal('Campus Activity Web Hub', 'Engineered strictly without front-end frameworks to ensure full semantic accessibility, zero contrast issues, and lightweight page speed.')">Quick Info</button>
+            <a href="project-details.html" class="btn">Full Project Details</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h2>Relational Database System</h2>
+            <p>A relational schema project designed around third normal form (3NF), database integrity triggers, and complex analytical views.</p>
+          </div>
+          <div class="card-actions">
+            <button type="button" class="btn btn-secondary" onclick="openModal('Relational Database System', 'Emphasized transaction boundaries, referential consistency constraints, indexing strategies, and automated data validation.')">Quick Info</button>
+            <a href="project-details.html" class="btn">Full Project Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Pop-up -->
+  <div id="modal-container" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal-box">
+      <h2 id="modal-title">Project Details</h2>
+      <p id="modal-desc">Summary description will appear here.</p>
+      <div style="text-align: right; margin-top: 1.5rem;">
+        <button type="button" id="modal-close-btn" class="btn" onclick="closeModal()">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Shahrier Noor Pritom. Developed with vanilla HTML, CSS, and JavaScript.</p>
+  </footer>
+
+  <script>
+    let prevElem = null;
+    const modal = document.getElementById('modal-container');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+    const closeBtn = document.getElementById('modal-close-btn');
+
+    function openModal(title, text) {
+      prevElem = document.activeElement;
+      modalTitle.textContent = title;
+      modalDesc.textContent = text;
+      modal.classList.add('active');
+      closeBtn.focus();
+      document.addEventListener('keydown', onKeyDown);
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.removeEventListener('keydown', onKeyDown);
+      if (prevElem) prevElem.focus();
+    }
+
+    function onKeyDown(e) {
+      if (e.key === 'Escape') closeModal();
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  </script>
+</body>
+</html>
